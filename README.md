@@ -3,6 +3,7 @@ Running signal in a docker container
 
 to run the container:
 
+```
 docker run --rm -it \
 	--name telegram \
 	--hostname=$(hostname) \
@@ -13,10 +14,11 @@ docker run --rm -it \
 	-v /etc/localtime:/etc/localtime:ro \
 	-v ~/.docker/.SignalData:/home/user/.config/Signal \
 	lemmy04/signal
-
+```
 
 to run the container when your home is on nfs you have to do it this way:
 
+```
 docker run --rm -it --user root \
 	--name telegram \
 	--hostname=$(hostname) \
@@ -27,5 +29,5 @@ docker run --rm -it --user root \
 	-v /etc/localtime:/etc/localtime:ro \
 	-v ~/.docker/.SignalData:/home/user/.config/Signal \
 	lemmy04/signal /usr/bin/signal-desktop --no-sandbox
-
+```
 
