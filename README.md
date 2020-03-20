@@ -5,7 +5,7 @@ to run the container:
 
 ```
 docker run --rm -it \
-	--name telegram \
+	--name Signal \
 	--hostname=$(hostname) \
 	--device /dev/snd \
 	-e DISPLAY=unix$DISPLAY \
@@ -20,7 +20,7 @@ to run the container when your home is on nfs you have to do it this way:
 
 ```
 docker run --rm -it --user root \
-	--name telegram \
+	--name Signal \
 	--hostname=$(hostname) \
 	--device /dev/snd \
 	-e DISPLAY=unix$DISPLAY \
